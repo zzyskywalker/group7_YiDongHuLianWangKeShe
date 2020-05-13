@@ -2,8 +2,8 @@
 ===
 ## 项目概述
 ## 目录结构
-|---group7_houtai<br>
-| > |---code                     #本地需要运行的代码<br>
+>group7_houtai<br>
+>>code                     #本地需要运行的代码<br>
 | > |---model                   #训练好的模型<br>
 | > |---train	       #训练集的训练数据和中间数据<br>
 | > | > |---datasets          #训练集<br>
