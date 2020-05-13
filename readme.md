@@ -2,26 +2,26 @@
 ===
 ## 项目概述
 ## 目录结构
->group7_houtai<br>
->>code                     #本地需要运行的代码<br>
-| > |---model                   #训练好的模型<br>
-| > |---train	       #训练集的训练数据和中间数据<br>
-| > | > |---datasets          #训练集<br>
-| > | > |---datacleaned    #训练集清洗过后<br>
-| > | > |---featured         #清洗后的数据提取特征<br>
-| > | > |---datacsv           #提取特征后的数据合并<br>
-| > | > |---labeld             #合并后的打标签<br>
-| > |---test1	       #第一次测试集的测试数据、中间数据和结果<br>
+|---group7_houtai<br>
+| > |---code            &nbsp;         #本地需要运行的代码<br>
+| > |---model           &nbsp;        #训练好的模型<br>
+| > |---train	    	 &nbsp;  #训练集的训练数据和中间数据<br>
+| > | > |---datasets    &nbsp;      #训练集<br>
+| > | > |---datacleaned  &nbsp;  #训练集清洗过后<br>
+| > | > |---featured      &nbsp;   #清洗后的数据提取特征<br>
+| > | > |---datacsv       &nbsp;    #提取特征后的数据合并<br>
+| > | > |---labeld       &nbsp;      #合并后的打标签<br>
+| > |---test1	      &nbsp; #第一次测试集的测试数据、中间数据和结果<br>
 | > | > |---datacleaned<br>
 | > | > |---datasets<br>
 | > | > |---featured<br>
 | > | > |---result<br>
-| > |---test2	       #第二次测试集的测试数据、中间数据和结果<br>
+| > |---test2	     &nbsp;  #第二次测试集的测试数据、中间数据和结果<br>
 | > | > |---datacleaned<br>
 | > | > |---datasets<br>
 | > | > |---featured<br>
 | > | > |---result<br>
-| > |---upcode	       #上传到平台的代码<br>
+| > |---upcode	     &nbsp;  #上传到平台的代码<br>
 
 ## 版本管理<br>
 2020.5.13 第一次上传<br>
