@@ -21,6 +21,9 @@ import os
 
 def datacleaned(path,to_path):
     filenames=os.listdir(path)
+    for filename in filenames:
+        if os.path.splitext(filename)[1] !='.csv': #目录下包含.csv的文件
+            filenames.remove(filename)
     print(filenames)
     for file in filenames:
         pd_data=pd.read_csv(path+"/"+file,usecols={"DE_time","FE_time"})
@@ -40,7 +43,7 @@ def datacleaned(path,to_path):
         print(file+"finished")
     
 if __name__ == "__main__":
-    datacleaned("../train/datasets","../train/datacleaned")#train set
+    #datacleaned("../train/datasets","../train/datacleaned")#train set
     print("all finished")
     datacleaned("../test2/datasets","../test2/datacleaned")#test2 set 
     print("all finished")

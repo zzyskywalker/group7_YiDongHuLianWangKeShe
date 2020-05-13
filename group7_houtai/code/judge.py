@@ -18,6 +18,9 @@ def judge(path,to_path,model):#无RPM
     #     clf=pickle.load(file)
     clf=joblib.load(model)
     filenames = os.listdir(path)
+    for filename in filenames:
+        if os.path.splitext(filename)[1] !='.csv': #目录下包含.csv的文件
+            filenames.remove(filename)
     print(filenames)
     
     result=pd.DataFrame(columns=["label","filename"])

@@ -21,8 +21,11 @@ import traceback
 def featureget(path,to_path,size):
 
     filenames=os.listdir(path)
+    for filename in filenames:
+        if os.path.splitext(filename)[1] !='.csv': #目录下包含.csv的文件
+            filenames.remove(filename)
     print(filenames)
-    
+    print(type(filenames))
     columns_list = ['time_mean','time_std','time_max','time_min','time_rms','time_ptp','time_median','time_iqr','time_pr','time_skew','time_kurtosis','time_var','time_amp',
                         'time_smr','time_wavefactor','time_peakfactor','time_pulse','time_margin',
                         'freq_mean','freq_std','freq_max','freq_min','freq_rms','freq_median',

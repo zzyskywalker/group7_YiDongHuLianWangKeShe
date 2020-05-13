@@ -18,6 +18,9 @@ import os
 import re
 def datagena(path,to_path):
     all_filenames= os.listdir(path)
+    for filename in all_filenames:
+        if os.path.splitext(filename)[1] !='.csv': #目录下包含.csv的文件
+            all_filenames.remove(filename)
     #print(all_filenames)
     str_all_filenames=str(all_filenames)
     
@@ -29,7 +32,7 @@ def datagena(path,to_path):
     IR_filenames_list=[]
     OR_filenames_list=[]
     NORMAL_filenames_list=[]
-    print(OR_filenames_list)
+
     
     for file in B_filenames:
         B_filenames_list.append(file.group())
