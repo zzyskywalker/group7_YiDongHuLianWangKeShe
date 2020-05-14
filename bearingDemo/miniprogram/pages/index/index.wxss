@@ -1,0 +1,130 @@
+page {
+  overflow: hidden;
+}
+
+.page__hd {
+  padding: 10rpx;
+}
+
+.page__title {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.page__desc {
+  margin-top: 5px;
+  color: var(--weui-FG-1);
+  text-align: left;
+  font-size: 14px;
+}
+
+.page__bd {
+  padding-bottom: 40px;
+}
+
+.page__bd_spacing {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.placeholder {
+  margin: 5px;
+  padding: 0 10px;
+  text-align: center;
+  background-color: var(--weui-BG-1);
+  height: 2.3em;
+  line-height: 2.3em;
+  color: var(--weui-FG-1);
+}
+
+.picker {
+  position: relative;
+  display: block;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 24px;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+  color: green;
+  line-height: 1.41176471;
+  border-radius: 4px;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.scroll-view {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  width: 280px;
+  height: 100%;
+  font-size: 20px;
+}
+
+.table_h {
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+  height: 30px;
+  line-height: 40px;
+  border-bottom: 1px solid black;
+}
+
+.table_d {
+  display: flex;
+  width: 100%;
+  font-size: 15px;
+  height: 30px;
+  line-height: 35px;
+  border-bottom: 1px solid black;
+}
+
+.th {
+  width: 50%;
+  height: 30px;
+  line-height: 35px;
+  text-align: center;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.td {
+  width: 50%;
+  height: 30px;
+  line-height: 35px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.echartContainer {
+  position: absolute;
+  width: 290px;
+  margin: 5px;
+  top: 260px;
+  left: center;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}

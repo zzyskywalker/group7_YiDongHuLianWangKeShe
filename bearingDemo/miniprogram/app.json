@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/warning/warning"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "轴承故障监测",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "工况",
+        "iconPath": "images/icon/index.png",
+        "selectedIconPath": "images/icon/index2.png"
+      },
+      {
+        "pagePath": "pages/warning/warning",
+        "text": "警告",
+        "iconPath": "images/icon/warning.png",
+        "selectedIconPath": "images/icon/warning2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

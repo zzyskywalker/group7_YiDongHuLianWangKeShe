@@ -1,0 +1,31 @@
+<view class="page" data-weui-theme="light">
+  <view class="page__hd">
+    <view class="page__title">诊断时间：
+      <text class="page__title_time">{{time}}</text>
+    </view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <scroll-view scroll-y="true" style="width: 100%; height: 100%;margin-top:2px;margin-bottom:2px">
+      <view class="table">
+        <view class="table_h">
+          <view class="th">设备号</view>
+          <view class="th">状态</view>
+          <view class="th">故障位置</view>
+        </view>
+        <view class='table_d' wx:for='{{device}}' wx:key="key" wx:for:item='item'>
+          <view class="td" style="font-weight:bold">{{item.key}}</view>
+          <block data-i="i" wx:if='{{item.arr[i]==0}}'>
+            <view class="td" style="color:green;font-weight:bold">正常</view>
+            <view class="td" style="color:#237ab7;font-weight:bold">无</view>
+          </block>
+          <block data-i="i" wx:elif='{{item.arr[i]!=0}}'>
+            <view class="td" style="color:red;font-weight:bold">故障</view>
+            <view class="td" style="color:#237ab7;font-weight:bold" data-i="i" wx:if='{{item.arr[i]==1}}'>B</view>
+            <view class="td" style="color:#237ab7;font-weight:bold" data-i="i" wx:elif='{{item.arr[i]==2}}'>OR</view>
+            <view class="td" style="color:#237ab7;font-weight:bold" data-i="i" wx:elif='{{item.arr[i]==3}}'>IR</view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

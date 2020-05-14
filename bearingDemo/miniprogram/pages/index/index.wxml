@@ -1,0 +1,45 @@
+<view class="page" data-weui-theme="light">
+  <view class="page__hd">
+    <view class="page__title">诊断时间：
+      <text class="page__title_time">{{time}}</text>
+    </view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker weui-btn_default">
+            当前设备：
+            <text style="color:#237ab7;font-weight:bold;font-size:18px">{{array[index]}}</text>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <scroll-view scroll-y="true" style="width: 100%; height: 160px;margin-top:2px;margin-bottom:2px">
+      <view class="table">
+        <view class="table_h">
+          <view class="th">工况参数</view>
+          <view class="th">有效值</view>
+        </view>
+        <view class="table_d" wx:for='{{result}}' wx:key="key" wx:for:item='item'>
+          <view class="td" style="font-weight:bold">{{item.key}}</view>
+          <view class="td" style="color:#237ab7" data-i="i" wx:if="{{item.arr[0]>100}}">{{item.arr[0]}}</view>
+          <view class="td" style="color:#237ab7" data-i="i" wx:elif="{{item.arr[0]<100}}">{{item.arr[i]}}</view>
+        </view>
+      </view>
+    </scroll-view>
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+          <view class="picker weui-btn_default">
+            当前工况：
+            <text style="color:#237ab7;font-weight:bold">{{array2[index2]}}</text>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="echartContainer">
+      <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+    </view>
+  </view>
+</view>
