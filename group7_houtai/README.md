@@ -8,3 +8,9 @@ model存放训练好的模型
 train存放训练集的数据集和产生的中间数据以及结果
 test1存放第一次测试的数据集和中间数据以及结果
 test2存放第二次测试的数据集和中间数据以及结果
+
+
+为了方便下载，将代码部分与数据集部分分开存放，所以训练集和两个测试集需要另行下载后放在相应的位置。
+训练集复制到 /group7_houtai/train/datasets
+test1测试集复制到/group7_houtai/test1/datasets
+test2测试集复制到/group7_houtai/test2/datasets
