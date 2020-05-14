@@ -4,8 +4,8 @@
 前端采用微信小程序进行端到端的app开发，分析工厂运维人员在实际工作中的需求，做出设备工况监测、故障类型监测等核心功能。<br>
 后台对数据进行清洗、特征提取、训练模型，对数据进行分类，判断故障类型
 ## 目录结构
-|---bearingDemo<br> &nbsp; 小程序部分
-|---group7_houtai<br>&nbsp; 后台部分
+|---bearingDemo &nbsp; 小程序部分<br>
+|---group7_houtai&nbsp; 后台部分<br>
 | > |---code            &nbsp;         #本地需要运行的代码<br>
 | > |---model           &nbsp;        #训练好的模型<br>
 | > |---train	    	 &nbsp;  #训练集的训练数据和中间数据<br>
