@@ -23,13 +23,13 @@ def train(path,to_path):#没有RPM
     print(y.shape)
     
     train_x,test_x,train_y,test_y = train_test_split(x,y,test_size=0.1,random_state=123)
-    
-    clf = RandomForestClassifier(n_estimators=400,
+    #随机森林分类器
+    clf = RandomForestClassifier(n_estimators=400,  #树的数量
                                  oob_score=True,
-                                 max_features=70,
+                                 max_features=70,#最多使用的特征数，之前我是一列提取45个特征，共两列，所以一共提取了90个特征
+                                                 # 但是使用90维的特征时不如70维的结果准确，猜测是过拟合造成的。
                                  min_samples_split=5,
                                  ).fit(train_x, train_y)
-    
     predict = clf.predict(test_x)
     
     accuracy = accuracy_score(test_y, predict)

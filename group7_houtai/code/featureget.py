@@ -123,5 +123,5 @@ def featureget(path,to_path,size):
         traceback.print_exc()
 
 if __name__ == "__main__":
-    featureget("../train/datacleaned","../train/featured",250)
-    featureget("../test2/datacleaned","../test2/featured",250)
+    featureget("../train/datacleaned","../train/featured",250)#对训练集进行特征提取
+    featureget("../test2/datacleaned","../test2/featured",250)#对第二个测试集进行特征提取

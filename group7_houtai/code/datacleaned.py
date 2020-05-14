@@ -29,13 +29,16 @@ def datacleaned(path,to_path):
         pd_data=pd.read_csv(path+"/"+file,usecols={"DE_time","FE_time"})
         read_data=pd_data.iloc[:,0:2]
         read_array=np.array(read_data)
-        clf = IsolationForest(n_estimators=400, 
+        
+        #孤立森林算法
+        clf = IsolationForest(n_estimators=400, # 森林中的树的个数
                               max_samples="auto", 
-                              contamination=0.001, 
+                              contamination=0.001, #异常点的比例
                               max_features=1.0, 
                               bootstrap=False, n_jobs=1, random_state=None, 
                               verbose=0).fit(read_array)
-        pred =clf.predict(read_array)
+        pred =clf.predict(read_array)   #将数据输入进去，输出得到清洗后的pred
+        
         array_normal=read_array[pred == 1]
         frame_normal=pd.DataFrame(array_normal,columns=["DE_time","FE_time"])
        # frame_normal=pd.concat([frame_normal,pd_data.loc[0:frame_normal.shape[0]-1,"RPM"]],ignore_index=True,axis=1)
@@ -43,7 +46,7 @@ def datacleaned(path,to_path):
         print(file+"finished")
     
 if __name__ == "__main__":
-    #datacleaned("../train/datasets","../train/datacleaned")#train set
+    datacleaned("../train/datasets","../train/datacleaned")#train set
     print("all finished")
     datacleaned("../test2/datasets","../test2/datacleaned")#test2 set 
     print("all finished")

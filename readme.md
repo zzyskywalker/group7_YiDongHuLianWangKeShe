@@ -49,3 +49,4 @@
 数据集必须为 .csv格式
 <br>文件夹中的.gitkeep文件只是为了上传GitHub方便
 <br>运行之前检查各个文件夹的相对位置是否正确，请和上面的目录结构相对应。
+<br>在输出结果的时候约定normal(NORMAL), ball(B), outer race(OR), inner race(IR)的预测输出标签为0, 1, 2, 3。
